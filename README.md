@@ -1,3 +1,4 @@
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/kuYFMccO)
 # parte1
 ✏️ Parte I – Completar una función del CRUD
@@ -101,7 +102,8 @@ void modificarEstudiante() {
 
 // -----------------------------
 // 👇 TU TAREA: Completa esta función (DELETE)
- int main() {
+void eliminarEstudiante() {
+   int main() {
     string estudiantes[3][2] = {
         {"A123", "Juan"},
         {"B456", "María"},
@@ -139,7 +141,7 @@ void modificarEstudiante() {
     } else {
         cout << "\nCarnet no encontrado :(\n";
     }
-}
+    
 // -----------------------------
 
 // Menú principal
