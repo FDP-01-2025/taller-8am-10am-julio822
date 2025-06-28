@@ -101,10 +101,44 @@ void modificarEstudiante() {
 
 // -----------------------------
 // 👇 TU TAREA: Completa esta función (DELETE)
-void eliminarEstudiante() {
-    // Escribe aquí la función que elimine un estudiante por su carnet.
-    // Puedes usar o no el manejo de archivos.
-    // Si lo haces con archivos, ganarás **2 puntos extra**.
+ int main() {
+    string estudiantes[3][2] = {
+        {"A123", "Juan"},
+        {"B456", "María"},
+        {"C789", "Pedro"}
+    };
+    
+    cout << "=== ELIMINAR ESTUDIANTE ===\n";
+    cout << "Estudiantes actuales:\n";
+    for(int i = 0; i < 3; i++) {
+        cout << estudiantes[i][0] << " - " << estudiantes[i][1] << endl;
+    }
+    
+    string carnet;
+    cout << "\nIngrese carnet a eliminar: ";
+    cin >> carnet;
+    
+    bool encontrado = false;
+    for(int i = 0; i < 3; i++) {
+        if(estudiantes[i][0] == carnet) {
+            // "Eliminamos" marcando como vacío (lo haría mejor un alumno avanzado)
+            estudiantes[i][0] = "ELIMINADO";
+            estudiantes[i][1] = "";
+            encontrado = true;
+        }
+    }
+    
+    if(encontrado) {
+        cout << "\nEstudiante eliminado (a medias)\n";
+        cout << "Lista actualizada:\n";
+        for(int i = 0; i < 3; i++) {
+            if(estudiantes[i][0] != "ELIMINADO") {
+                cout << estudiantes[i][0] << " - " << estudiantes[i][1] << endl;
+            }
+        }
+    } else {
+        cout << "\nCarnet no encontrado :(\n";
+    }
 }
 // -----------------------------
 
